@@ -221,19 +221,22 @@ export default function FuturisticHeroUI() {
             <div className="flex flex-wrap items-center justify-between gap-10 rounded-[30px] border border-[#D4AF37]/10 darkMode ? 'bg-black/60' : 'bg-white/70' px-8 py-8 backdrop-blur-xl lg:px-10 lg:py-10">
               <div>
                 <p className="text-lg uppercase tracking-[0.2em] text-[#D4AF37] lg:text-xl">
-                  Trusted By
+                  Reach me
                 </p>
                 <p className="mt-3 text-lg uppercase tracking-[0.2em] text-[#D4AF37] lg:text-xl">
-                  Amazing Clients
+                  call/whatsapp: +254700806728
+                </p>
+                <p className="mt-1  tracking-[0.2em] text-[#D4AF37] lg:text-xl">
+                  EMAIL: hezronoricho@gmail.com
                 </p>
               </div>
 
               <div className="flex flex-wrap items-center gap-8 text-3xl font-medium text-[#D4AF37] opacity-90 lg:gap-14 lg:text-5xl">
-                <span>Google</span>
-                <span>Microsoft</span>
-                <span>AWS</span>
-                <span>Tesla</span>
-                <span>airbnb</span>
+                <span>Whatsapp</span>
+                <span>Gmail</span>
+                <span>Facebook</span>
+                <span>Twitter</span>
+                <span>Instagram</span>
               </div>
             </div>
           </div>
