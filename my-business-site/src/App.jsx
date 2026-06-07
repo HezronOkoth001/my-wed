@@ -2,6 +2,9 @@
 import { useState } from 'react'
 import './App.css'
 import profile from './assets/profile.png.png'
+import cv from './assets/Hezron Okoth CV....pdf'
+
+
 
 
 
@@ -26,10 +29,13 @@ const services = [
 const skills = [
   'Python',
   'JavaScript',
+  'Linux',
+  'Wireshark',
+  'Nmap',
+  'Burpsuite',
   'React',
   'TypeScript',
   'Tailwind CSS',
-  'CSS Frameworks',
   'Frontend Development',
   'Responsive Design',
   'UI/UX Design',
@@ -38,7 +44,7 @@ const skills = [
 
 const stats = [
   {
-    number: '4+',
+    number: '2+',
     label: 'Years Experience',
   },
   {
@@ -211,7 +217,9 @@ export default function FuturisticHeroUI() {
                 </button>
 
                 <button className="rounded-2xl border border-[#D4AF37]/50 px-8 py-4 text-sm uppercase tracking-[0.12em] text-[#D4AF37] transition-all duration-300 hover:bg-[#D4AF37] hover:text-black lg:px-10 lg:py-5 lg:text-xl">
-                  Contact Me
+                
+                  <a href ="https://wa.me/254700806728" target="_blank" rel="noopener noreferrer">Contact me
+                  </a>
                 </button>
               </div>
             </div>
@@ -291,8 +299,12 @@ export default function FuturisticHeroUI() {
               </p>
             </div>
 
-            <button className="rounded-full bg-[#D4AF37] px-8 py-4 font-medium text-black shadow-[0_0_45px_rgba(212,175,55,0.35)] transition hover:bg-[#c19b2e]">
-              Download CV
+          <button className="rounded-full bg-[#D4AF37] px-8 py-4 font-medium text-black shadow-[0_0_45px_rgba(212,175,55,0.35)] transition hover:bg-[#c19b2e]">
+
+
+              <a href="assets/Hezron Okoth CV....pdf" download
+              download="Hezron Okoth CV....pdf"
+              >Download</a>
             </button>
           </div>
 
@@ -415,7 +427,10 @@ export default function FuturisticHeroUI() {
           </p>
 
           <button className="rounded-full bg-[#D4AF37] px-10 py-5 text-lg font-medium text-black shadow-[0_0_45px_rgba(212,175,55,0.35)] transition hover:bg-[#c19b2e]">
-            Start Project
+          
+            <a href="https://wa.me/254700806728" target="_blank" rel="noopener noreferrer">Start projets</a>
+               
+            
           </button>
         </div>
       </section>
