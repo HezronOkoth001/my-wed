@@ -166,7 +166,7 @@ export default function FuturisticHeroUI() {
       </header>
 
       <main id="home" className="relative z-10 px-4 pb-20 pt-36 lg:px-6 lg:pt-44">
-        <div className="relative mx-auto max-w-[1450px] overflow-hidden rounded-[40px] border border-[#D4AF37]/10 ${darkMode ? 'bg-[#050505]/90' : 'bg-white/80'}">
+        <div className={`relative mx-auto max-w-[1450px] overflow-hidden rounded-[40px] border border-[#D4AF37]/10 ${darkMode ? 'bg-[#050505]/90' : 'bg-white/80'}`}>
           <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-[#D4AF37]/10 blur-3xl" />
 
           <div className="grid items-center gap-14 p-8 lg:grid-cols-[0.95fr_1.05fr] lg:p-16">
