@@ -190,7 +190,7 @@ export default function FuturisticHeroUI() {
               </div>
 
               <div className="leading-[0.85]">
-                <h1 className="text-5xl font-serif tracking-tight text-white sm:text-7xl lg:text-[9rem]">
+                <h1 className={`text-5xl font-serif tracking-tight sm:text-7xl lg:text-[9rem] ${darkMode ? 'text-white' : 'text-black'}`}>
                   HEZRON
                 </h1>
                 <h1 className="text-5xl font-serif tracking-tight text-[#D4AF37] sm:text-7xl lg:text-[9rem]">
@@ -198,13 +198,13 @@ export default function FuturisticHeroUI() {
                 </h1>
               </div>
 
-              <h2 className="text-lg uppercase tracking-[0.2em] text-white/90 sm:text-2xl lg:text-3xl">
+              <h2 className={`text-lg uppercase tracking-[0.2em] sm:text-2xl lg:text-3xl ${darkMode ? 'text-white/90' : 'text-black/80'}`}>
                 Software Developer & Web Designer
               </h2>
 
               <div className="h-[2px] w-24 bg-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.8)] lg:w-32" />
 
-              <p className="max-w-3xl text-base leading-relaxed text-white/75 sm:text-xl lg:text-2xl">
+              <p className={`max-w-3xl text-base leading-relaxed sm:text-xl lg:text-2xl ${darkMode ? 'text-white/75' : 'text-gray-700'}`}>
                 I build modern, responsive and high-performance websites and
                 web applications that help businesses grow, stand out and
                 deliver premium digital experiences.
@@ -303,14 +303,6 @@ export default function FuturisticHeroUI() {
                 professional across all devices.
               </p>
             </div>
-
-          <a
-              href={cv}
-              download="Hezron Okoth CV.pdf"
-              className="inline-block rounded-full bg-[#D4AF37] px-8 py-4 font-medium text-black shadow-[0_0_45px_rgba(212,175,55,0.35)] transition hover:bg-[#c19b2e]"
-            >
-              Download CV
-            </a>
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -476,12 +468,14 @@ export default function FuturisticHeroUI() {
             work together.
           </p>
 
-          <button className="rounded-full bg-[#D4AF37] px-10 py-5 text-lg font-medium text-black shadow-[0_0_45px_rgba(212,175,55,0.35)] transition hover:bg-[#c19b2e]">
-          
-            <a href="https://wa.me/254700806728" target="_blank" rel="noopener noreferrer">Start projects</a>
-               
-            
-          </button>
+          <a
+            href="https://wa.me/254700806728"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-full bg-[#D4AF37] px-10 py-5 text-lg font-medium text-black shadow-[0_0_45px_rgba(212,175,55,0.35)] transition hover:bg-[#c19b2e]"
+          >
+            Start projects
+          </a>
         </div>
       </section>
 
