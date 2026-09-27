@@ -3,166 +3,51 @@ import { useState } from 'react'
 import './App.css'
 import profile from './assets/profile.png.png'
 
-
-
-
-
 const services = [
-  {
-    title: 'Web Design',
-    image:
-      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop',
-  },
-  {
-    title: 'Frontend Development',
-    image:
-      'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop',
-  },
-  {
-    title: 'UI/UX Systems',
-    image:
-      'https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1200&auto=format&fit=crop',
-  },
-];
-
-const skills = [
-  'Python',
-  'JavaScript',
-  'Linux',
-  'Wireshark',
-  'Nmap',
-  'Burpsuite',
-  'React',
-  'TypeScript',
-  'Tailwind CSS',
-  'Frontend Development',
-  'Responsive Design',
-  'UI/UX Design',
-];
-
-
-const stats = [
-  {
-    number: '2+',
-    label: 'Years Experience',
-  },
-  {
-    number: '20+',
-    label: 'Projects Completed',
-  },
-  {
-    number: '10+',
-    label: 'Modern Technologies & Tools',
-  },
-];
+  { title: 'Web Design', image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop' },
+  { title: 'Frontend Development', image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop' },
+  { title: 'UI/UX Systems', image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1200&auto=format&fit=crop' },
+]
+const skills = ['Python','JavaScript','Linux','Wireshark','Nmap','Burpsuite','React','TypeScript','Tailwind CSS','Frontend Development','Responsive Design','UI/UX Design']
+const stats = [{number:'2+',label:'Years Experience'},{number:'20+',label:'Projects Completed'},{number:'10+',label:'Modern Technologies & Tools'}]
 
 export default function FuturisticHeroUI() {
-  const [darkMode, setDarkMode] = useState(true);
-  const [showContactOptions, setShowContactOptions] = useState(false);
-  const [contactForm, setContactForm] = useState({ name: '', email: '', message: '' });
-
-  const handleContactSubmit = (event) => {
-    event.preventDefault();
-    const text = `Hello Hezron, my name is ${contactForm.name}. Email: ${contactForm.email}. ${contactForm.message}`;
-    window.open(`https://wa.me/254700806728?text=${encodeURIComponent(text)}`, '_blank');
-  };
+  const [darkMode, setDarkMode] = useState(true)
+  const [showContactOptions, setShowContactOptions] = useState(false)
+  const [contactForm, setContactForm] = useState({name:'',email:'',message:''})
+  const handleContactSubmit=(event)=>{event.preventDefault();const text=`Hello Hezron, my name is ${contactForm.name}. Email: ${contactForm.email}. ${contactForm.message}`;window.open(`https://wa.me/254700806728?text=${encodeURIComponent(text)}`,'_blank')}
 
   return (
-    <div
-      className={`min-h-screen overflow-hidden transition-all duration-500 ${
-        darkMode ? 'bg-[#050505] text-white' : 'bg-[#f5f1e8] text-black'
-      }`}
-    >
-      <div
-        className={`fixed inset-0 -z-10 ${
-          darkMode
-            ? 'bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.12),transparent_40%)]'
-            : 'bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.18),transparent_45%)]'
-        }`}
-      />
-      <div
-        className={`fixed inset-0 -z-10 bg-[size:80px_80px] ${
-          darkMode
-            ? 'opacity-20 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)]'
-            : 'opacity-10 bg-[linear-gradient(rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.05)_1px,transparent_1px)]'
-        }`}
-      />
-
+    <div className={`min-h-screen overflow-hidden transition-all duration-500 ${darkMode?'bg-[#050505] text-white':'bg-[#f5f1e8] text-black'}`}>
+      <div className={`fixed inset-0 -z-10 ${darkMode?'bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.12),transparent_40%)]':'bg-[radial-gradient(circle_at_top,rgba(212,175,55,0.18),transparent_45%)]'}`} />
+      <div className={`fixed inset-0 -z-10 bg-[size:80px_80px] ${darkMode?'opacity-20 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)]':'opacity-10 bg-[linear-gradient(rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.05)_1px,transparent_1px)]'}`} />
       <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-4 lg:px-6 lg:pt-6">
         <div className="mx-auto flex max-w-[1450px] items-center justify-between rounded-[30px] border border-[#D4AF37]/20 bg-black/70 px-6 py-5 backdrop-blur-2xl lg:px-10 lg:py-6">
-          <h1 className="text-2xl font-serif tracking-wide text-[#D4AF37] lg:text-5xl">
-            HEZRON OKOTH
-          </h1>
-
+          <h1 className="text-2xl font-serif tracking-wide text-[#D4AF37] lg:text-5xl">HEZRON OKOTH</h1>
           <nav className="hidden items-center gap-10 uppercase tracking-[0.2em] text-sm text-white/90 lg:flex">
-            <a href="#home" className="text-[#D4AF37] transition">
-              Home
-            </a>
-            <a href="#about" className="transition hover:text-[#D4AF37]">
-              About
-            </a>
-            <a href="#services" className="transition hover:text-[#D4AF37]">
-              Services
-            </a>
-            <a href="#skills" className="transition hover:text-[#D4AF37]">
-              Skills
-            </a>
-            <a href="#projects" className="transition hover:text-[#D4AF37]">
-              Projects
-            </a>
-            <a href="#contact" className="transition hover:text-[#D4AF37]">
-              Contact
-            </a>
+            {['Home','About','Services','Skills','Projects','Contact'].map((item,index)=><a key={item} href={`#${item.toLowerCase()}`} className={`${index===0?'text-[#D4AF37]':'transition hover:text-[#D4AF37]'}`}>{item}</a>)}
           </nav>
-
           <div className="flex items-center gap-4">
-            <button
-              onClick={() => setDarkMode(!darkMode)}
-              className="rounded-full border border-[#D4AF37]/50 px-5 py-3 text-xs uppercase tracking-[0.15em] text-[#D4AF37] transition-all duration-300 hover:bg-[#D4AF37] hover:text-black"
-            >
-              {darkMode ? 'Light Mode' : 'Dark Mode'}
-            </button>
-
+            <button onClick={()=>setDarkMode(!darkMode)} className="rounded-full border border-[#D4AF37]/50 px-5 py-3 text-xs uppercase tracking-[0.15em] text-[#D4AF37] transition-all duration-300 hover:bg-[#D4AF37] hover:text-black">{darkMode?'Light Mode':'Dark Mode'}</button>
             <div className="relative">
-              <button
-                onClick={() => setShowContactOptions(!showContactOptions)}
-                className="rounded-2xl border border-[#D4AF37]/50 px-5 py-3 text-sm uppercase tracking-[0.15em] text-[#D4AF37] transition-all duration-300 hover:bg-[#D4AF37] hover:text-black lg:px-8 lg:py-4"
-              >
-                Let&apos;s Talk
-              </button>
-
-              <div
-                className={`absolute right-0 top-[120%] w-64 overflow-hidden rounded-3xl border border-[#D4AF37]/20 backdrop-blur-2xl transition-all duration-500 ${
-                  showContactOptions
-                    ? 'max-h-60 opacity-100 translate-y-0'
-                    : 'max-h-0 opacity-0 -translate-y-4 pointer-events-none'
-                } ${darkMode ? 'bg-black/90' : 'bg-white/90'}`}
-              >
-                <div className="flex flex-col gap-4 p-5">
-                  <a
-                    href="https://wa.me/254700806728"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-3 rounded-2xl bg-[#25D366] px-5 py-4 text-center text-sm font-semibold uppercase tracking-[0.15em] text-white transition-all duration-300 hover:scale-105"
-                  >
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                      alt="WhatsApp"
-                      className="h-7 w-7 rounded-full"
-                    />
-                    WhatsApp
+              <button onClick={()=>setShowContactOptions(!showContactOptions)} className="rounded-2xl border border-[#D4AF37]/50 px-5 py-3 text-sm uppercase tracking-[0.15em] text-[#D4AF37] transition-all duration-300 hover:bg-[#D4AF37] hover:text-black lg:px-8 lg:py-4">Let's Talk</button>
+              <div className={`absolute right-0 top-[120%] w-72 overflow-hidden rounded-3xl border border-[#D4AF37]/20 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-2xl transition-all duration-500 ${showContactOptions?'max-h-72 opacity-100 translate-y-0':'max-h-0 opacity-0 -translate-y-4 pointer-events-none'} ${darkMode?'bg-black/95':'bg-white/95'}`}>
+                <div className="flex flex-col gap-3 p-4">
+                  <a href="https://wa.me/254700806728" target="_blank" rel="noopener noreferrer" className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-[#25D366]/30 bg-gradient-to-r from-[#25D366] to-[#128C7E] px-5 py-4 text-white shadow-[0_8px_25px_rgba(37,211,102,0.22)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(37,211,102,0.35)]">
+                    <span className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/15 ring-1 ring-white/25 shadow-inner">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="h-7 w-7" />
+                    </span>
+                    <span className="flex flex-col items-start"><span className="text-sm font-bold tracking-wide">WhatsApp</span><span className="text-[11px] text-white/75">Chat with me directly</span></span>
+                    <span className="ml-auto text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
                   </a>
-
-                  <a
-                    href="mailto:hezronoricho@gmail.com"
-                    className="flex items-center justify-center gap-3 rounded-2xl bg-[#D4AF37] px-5 py-4 text-center text-sm font-semibold uppercase tracking-[0.15em] text-black transition-all duration-300 hover:scale-105"
-                  >
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg"
-                      alt="Gmail"
-                      className="h-7 w-7"
-                    />
-                    Gmail
+                  <a href="mailto:hezronoricho@gmail.com" className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-[#D4AF37]/50 bg-gradient-to-r from-[#D4AF37] to-[#b8942e] px-5 py-4 text-black shadow-[0_8px_25px_rgba(212,175,55,0.20)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(212,175,55,0.32)]">
+                    <span className="absolute inset-0 bg-white/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-black/10 ring-1 ring-black/15 shadow-inner">
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Gmail" className="h-7 w-7" />
+                    </span>
+                    <span className="flex flex-col items-start"><span className="text-sm font-bold tracking-wide">Gmail</span><span className="text-[11px] text-black/65">Send me an email</span></span>
+                    <span className="ml-auto text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
                   </a>
                 </div>
               </div>
@@ -170,454 +55,29 @@ export default function FuturisticHeroUI() {
           </div>
         </div>
       </header>
-
       <main id="home" className="relative z-10 px-4 pb-20 pt-36 lg:px-6 lg:pt-44">
-        <div className={`relative mx-auto max-w-[1450px] overflow-hidden rounded-[40px] border border-[#D4AF37]/10 ${darkMode ? 'bg-[#050505]/95 text-white' : 'bg-white/95 text-black'}`}>
+        <div className={`relative mx-auto max-w-[1450px] overflow-hidden rounded-[40px] border border-[#D4AF37]/10 ${darkMode?'bg-[#050505]/95 text-white':'bg-white/95 text-black'}`}>
           <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-[#D4AF37]/10 blur-3xl" />
-
           <div className="grid items-center gap-14 p-8 lg:grid-cols-[0.95fr_1.05fr] lg:p-16">
-            <div className="relative flex justify-center">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-[320px] w-[320px] rounded-full border border-[#D4AF37]/30 shadow-[0_0_80px_rgba(212,175,55,0.3)] lg:h-[560px] lg:w-[560px]" />
-              </div>
-
-              <div className="relative h-[300px] w-[300px] overflow-hidden rounded-full border-[4px] border-[#D4AF37]/70 shadow-[0_0_60px_rgba(212,175,55,0.35)] lg:h-[520px] lg:w-[520px]">
-                <img
-                  src={profile}
-                  alt="Hezron Okoth"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            </div>
-
+            <div className="relative flex justify-center"><div className="absolute inset-0 flex items-center justify-center"><div className="h-[320px] w-[320px] rounded-full border border-[#D4AF37]/30 shadow-[0_0_80px_rgba(212,175,55,0.3)] lg:h-[560px] lg:w-[560px]" /></div><div className="relative h-[300px] w-[300px] overflow-hidden rounded-full border-[4px] border-[#D4AF37]/70 shadow-[0_0_60px_rgba(212,175,55,0.35)] lg:h-[520px] lg:w-[520px]"><img src={profile} alt="Hezron Okoth" className="h-full w-full object-cover" /></div></div>
             <div className="space-y-8">
-              <div className="flex items-center gap-6 text-sm uppercase tracking-[0.25em] text-[#D4AF37] lg:text-2xl">
-                <span>Hello, I&apos;m</span>
-                <div className="h-[1px] w-20 bg-[#D4AF37]/50 lg:w-32" />
-              </div>
-
-              <div className="leading-[0.85]">
-                <h1 className={`text-5xl font-serif tracking-tight sm:text-7xl lg:text-[9rem] ${darkMode ? 'text-white' : 'text-black'}`}>
-                  HEZRON
-                </h1>
-                <h1 className="text-5xl font-serif tracking-tight text-[#D4AF37] sm:text-7xl lg:text-[9rem]">
-                  OKOTH
-                </h1>
-              </div>
-
-              <h2 className={`text-lg uppercase tracking-[0.2em] sm:text-2xl lg:text-3xl ${darkMode ? 'text-white/90' : 'text-black/80'}`}>
-                Software Developer & Web Designer
-              </h2>
-
+              <div className="flex items-center gap-6 text-sm uppercase tracking-[0.25em] text-[#D4AF37] lg:text-2xl"><span>Hello, I'm</span><div className="h-[1px] w-20 bg-[#D4AF37]/50 lg:w-32" /></div>
+              <div className="leading-[0.85]"><h1 className={`text-5xl font-serif tracking-tight sm:text-7xl lg:text-[9rem] ${darkMode?'text-white':'text-black'}`}>HEZRON</h1><h1 className="text-5xl font-serif tracking-tight text-[#D4AF37] sm:text-7xl lg:text-[9rem]">OKOTH</h1></div>
+              <h2 className={`text-lg uppercase tracking-[0.2em] sm:text-2xl lg:text-3xl ${darkMode?'text-white/90':'text-black/80'}`}>Software Developer & Web Designer</h2>
               <div className="h-[2px] w-24 bg-[#D4AF37] shadow-[0_0_20px_rgba(212,175,55,0.8)] lg:w-32" />
-
-              <p className={`max-w-3xl text-base leading-relaxed sm:text-xl lg:text-2xl ${darkMode ? 'text-white/75' : 'text-gray-700'}`}>
-                I build modern, responsive and high-performance websites and
-                web applications that help businesses grow, stand out and
-                deliver premium digital experiences.
-              </p>
-
-              <div className="flex flex-wrap gap-5 pt-4 lg:pt-6">
-                <a
-                  href="#projects"
-                  className="rounded-2xl bg-[#D4AF37] px-8 py-4 text-sm uppercase tracking-[0.12em] text-black transition-all duration-300 hover:scale-105 lg:px-10 lg:py-5 lg:text-xl"
-                >
-                  View My Work
-                </a>
-
-                <a
-                  href="https://wa.me/254700806728"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-2xl border border-[#D4AF37]/50 px-8 py-4 text-sm uppercase tracking-[0.12em] text-[#D4AF37] transition-all duration-300 hover:bg-[#D4AF37] hover:text-black lg:px-10 lg:py-5 lg:text-xl"
-                >
-                  Contact me
-                </a>
-              </div>
+              <p className={`max-w-3xl text-base leading-relaxed sm:text-xl lg:text-2xl ${darkMode?'text-white/75':'text-gray-700'}`}>I build modern, responsive and high-performance websites and web applications that help businesses grow, stand out and deliver premium digital experiences.</p>
+              <div className="flex flex-wrap gap-5 pt-4 lg:pt-6"><a href="#projects" className="rounded-2xl bg-[#D4AF37] px-8 py-4 text-sm uppercase tracking-[0.12em] text-black transition-all duration-300 hover:scale-105 lg:px-10 lg:py-5 lg:text-xl">View My Work</a><a href="https://wa.me/254700806728" target="_blank" rel="noopener noreferrer" className="rounded-2xl border border-[#D4AF37]/50 px-8 py-4 text-sm uppercase tracking-[0.12em] text-[#D4AF37] transition-all duration-300 hover:bg-[#D4AF37] hover:text-black lg:px-10 lg:py-5 lg:text-xl">Contact me</a></div>
             </div>
           </div>
-
-          <div className="px-8 pb-10 lg:px-16 lg:pb-12">
-            <div className={`flex flex-wrap items-center justify-between gap-10 rounded-[30px] border border-[#D4AF37]/10 ${darkMode ? 'bg-black/60' : 'bg-white/70'} px-8 py-8 backdrop-blur-xl lg:px-10 lg:py-10`}>
-              <div>
-                <p className="text-lg uppercase tracking-[0.2em] text-[#D4AF37] lg:text-xl">
-                  Reach me
-                </p>
-                <p className="mt-3 text-lg uppercase tracking-[0.2em] text-[#D4AF37] lg:text-xl">
-                  call/whatsapp: +254700806728
-                </p>
-                <p className="mt-1  tracking-[0.2em] text-[#D4AF37] lg:text-xl">
-                  EMAIL: hezronoricho@gmail.com
-                </p>
-              </div>
-
-              <div className="flex flex-wrap items-center gap-8 text-xl font-medium text-[#D4AF37] opacity-90 lg:gap-10 lg:text-2xl">
-                <a href="https://wa.me/254700806728" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">WhatsApp</a>
-                <a href="mailto:hezronoricho@gmail.com" className="transition hover:text-white">Gmail</a>
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">Facebook</a>
-                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">Twitter</a>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">Instagram</a>
-              </div>
-            </div>
-          </div>
+          <div className="px-8 pb-10 lg:px-16 lg:pb-12"><div className={`flex flex-wrap items-center justify-between gap-10 rounded-[30px] border border-[#D4AF37]/10 ${darkMode?'bg-black/60':'bg-white/70'} px-8 py-8 backdrop-blur-xl lg:px-10 lg:py-10`}><div><p className="text-lg uppercase tracking-[0.2em] text-[#D4AF37] lg:text-xl">Reach me</p><p className="mt-3 text-lg uppercase tracking-[0.2em] text-[#D4AF37] lg:text-xl">call/whatsapp: +254700806728</p><p className="mt-1 tracking-[0.2em] text-[#D4AF37] lg:text-xl">EMAIL: hezronoricho@gmail.com</p></div><div className="flex flex-wrap items-center gap-8 text-xl font-medium text-[#D4AF37] opacity-90 lg:gap-10 lg:text-2xl"><a href="https://wa.me/254700806728" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">WhatsApp</a><a href="mailto:hezronoricho@gmail.com" className="transition hover:text-white">Gmail</a><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">Facebook</a><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">Twitter</a><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">Instagram</a></div></div></div>
         </div>
       </main>
-
-      <section
-        id="about"
-        className={`border-t px-6 py-24 lg:px-20 lg:py-32 ${darkMode ? 'border-white/5' : 'border-black/10'}`}
-      >
-        <div className="mx-auto grid max-w-7xl items-center gap-20 lg:grid-cols-2">
-          <div className="space-y-8">
-            <div className="text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
-              About
-            </div>
-
-            <h2 className={`max-w-xl text-4xl font-black leading-tight sm:text-5xl lg:text-6xl ${darkMode ? 'text-white' : 'text-black'}`}>
-              Crafting Digital Experiences That Matter.
-            </h2>
-
-            <div className={`max-w-2xl space-y-6 text-lg leading-relaxed ${darkMode ? 'text-[#cfcfcf]' : 'text-gray-700'}`}>
-              <p>
-                I am a creative full-stack developer and digital designer focused
-                on building modern, high-performance websites and cinematic user
-                experiences for brands, businesses and personal portfolios.
-              </p>
-
-              <p>
-                I specialize in responsive web development, portfolio websites,
-                landing pages, business platforms and custom digital
-                experiences using modern technologies and frameworks.
-              </p>
-
-              <div id="skills" className="pt-6">
-                <div className="mb-6 flex items-end justify-between gap-4">
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37]">
-                      Technical Skills
-                    </p>
-                    <h3 className={`mt-2 text-2xl font-bold sm:text-3xl ${darkMode ? 'text-white' : 'text-black'}`}>
-                      Tools I Build With
-                    </h3>
-                  </div>
-                  <span className="hidden rounded-full border border-[#D4AF37]/30 px-4 py-2 text-xs uppercase tracking-wider text-[#D4AF37] sm:block">
-                    Core Stack
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                  {skills.map((skill, index) => (
-                    <div
-                      key={skill}
-                      className={`group relative overflow-hidden rounded-2xl border p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#D4AF37]/60 hover:shadow-[0_10px_30px_rgba(212,175,55,0.12)] ${darkMode ? 'border-white/10 bg-white/[0.03]' : 'border-black/10 bg-black/[0.02]'}`}
-                    >
-                      <div className="absolute inset-x-0 top-0 h-[2px] origin-left scale-x-0 bg-[#D4AF37] transition-transform duration-300 group-hover:scale-x-100" />
-                      <div className="flex items-center gap-3">
-                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#D4AF37]/10 text-xs font-bold text-[#D4AF37]">
-                          {String(index + 1).padStart(2, '0')}
-                        </span>
-                        <span className={`text-sm font-semibold sm:text-base ${darkMode ? 'text-[#e5e5e5]' : 'text-gray-800'}`}>
-                          {skill}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <p>
-                My goal is to help businesses and individuals stand out with
-                visually impressive websites that feel modern, fast and
-                professional across all devices.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {stats.map((item, index) => (
-              <div
-                key={item.label}
-                className={`rounded-3xl border border-[#D4AF37]/10 bg-[#111111]/80 p-8 backdrop-blur-xl ${
-                  index === 2 ? 'sm:col-span-2' : ''
-                }`}
-              >
-                <h3 className="text-5xl font-black text-[#D4AF37]">
-                  {item.number}
-                </h3>
-                <p className="mt-4 text-sm uppercase tracking-widest text-[#9f9f9f]">
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="services"
-        className="border-t border-white/5 px-6 py-24 lg:px-20 lg:py-32"
-      >
-        <div className="mx-auto max-w-7xl">
-          <div className="mb-16">
-            <p className="mb-5 text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
-              Services
-            </p>
-
-            <h2 className="max-w-2xl text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
-              Premium Digital Solutions.
-            </h2>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-3">
-            {services.map((item) => (
-              <div
-                key={item.title}
-                className={`group rounded-[32px] border p-8 transition duration-300 hover:bg-[#D4AF37]/10 ${darkMode ? 'border-[#D4AF37]/10 bg-[#111111]/80' : 'border-black/10 bg-white/80'}`}
-              >
-                <div className="mb-8 h-[220px] overflow-hidden rounded-3xl border border-[#D4AF37]/10">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                  />
-                </div>
-
-                <h3 className={`mb-4 text-2xl font-bold ${darkMode ? 'text-white' : 'text-black'}`}>
-                  {item.title}
-                </h3>
-
-                <p className={`leading-relaxed ${darkMode ? 'text-[#9f9f9f]' : 'text-gray-700'}`}>
-                  Modern and futuristic digital experiences with smooth
-                  interactions and premium aesthetics.
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="projects"
-        className="border-t border-white/5 px-6 py-24 lg:px-20 lg:py-32"
-      >
-        <div className="mx-auto max-w-7xl">
-          <p className="mb-5 text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
-            Projects
-          </p>
-
-          <h2 className={`max-w-3xl text-4xl font-black leading-tight sm:text-5xl lg:text-6xl ${darkMode ? 'text-white' : 'text-black'}`}>
-            Modern Websites With Premium User Experiences.
-          </h2>
-
-          <div className="mt-16 grid gap-8 lg:grid-cols-3">
-            {[
-              {
-                title: 'Kenyan Sign Language Platform',
-                description:
-                  'A React and Vite learning platform designed to help users learn Kenyan Sign Language through structured content, videos and interactive pages.',
-                tags: ['React', 'Vite', 'Node.js'],
-                link: 'https://github.com/HezronOkoth001/master--kenyan-signLanguage-',
-              },
-              {
-                title: 'Business Website Platform',
-                description:
-                  'A modern business website focused on professional presentation, responsive design, customer contact and online visibility.',
-                tags: ['React', 'Tailwind CSS', 'Vite'],
-                link: 'https://github.com/HezronOkoth001/my-wed',
-              },
-              {
-                title: 'Developer Portfolio',
-                description:
-                  'A responsive personal portfolio showcasing software development, web design, cybersecurity skills and selected projects.',
-                tags: ['JavaScript', 'React', 'Responsive UI'],
-                link: 'https://github.com/HezronOkoth001',
-              },
-            ].map((project) => (
-              <article
-                key={project.title}
-                className="group overflow-hidden rounded-[32px] border border-[#D4AF37]/10 bg-[#111111]/80 transition duration-300 hover:-translate-y-2 hover:border-[#D4AF37]/40"
-              >
-                <div className="flex h-[220px] items-center justify-center bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.18),transparent_55%),linear-gradient(135deg,#1a1a1a,#0d0d0d)]">
-                  <span className="text-5xl font-black tracking-widest text-[#D4AF37]/70">
-                    {project.title.split(' ').map(word => word[0]).join('').slice(0, 3)}
-                  </span>
-                </div>
-
-                <div className="space-y-5 p-8">
-                  <h3 className="text-2xl font-bold text-white">
-                    {project.title}
-                  </h3>
-
-                  <p className="leading-relaxed text-[#9f9f9f]">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full border border-[#D4AF37]/20 px-3 py-1 text-xs text-[#D4AF37]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex rounded-full border border-[#D4AF37]/40 px-5 py-3 text-sm uppercase tracking-wider text-[#D4AF37] transition hover:bg-[#D4AF37] hover:text-black"
-                  >
-                    View Project
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="contact"
-        className={`border-t px-6 py-24 lg:px-20 lg:py-32 ${darkMode ? 'border-white/5' : 'border-black/10'}`}
-      >
-        <div className="mx-auto max-w-6xl">
-          <div className="mb-14 text-center">
-            <p className="mb-5 text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
-              Contact
-            </p>
-            <h2 className={`text-4xl font-black leading-tight sm:text-5xl lg:text-7xl ${darkMode ? 'text-white' : 'text-black'}`}>
-              Let&apos;s Build Something Amazing.
-            </h2>
-            <p className={`mx-auto mt-6 max-w-2xl text-lg leading-relaxed ${darkMode ? 'text-[#9f9f9f]' : 'text-gray-700'}`}>
-              Have a website idea, project or business that needs a digital presence?
-              Send me a message and let&apos;s talk.
-            </p>
-          </div>
-
-          <form
-            onSubmit={handleContactSubmit}
-            className={`mx-auto max-w-3xl space-y-6 rounded-[32px] border p-8 shadow-2xl lg:p-10 ${darkMode ? 'border-[#D4AF37]/10 bg-[#111111]/80' : 'border-black/10 bg-white/80'}`}
-          >
-            <div className="grid gap-6 sm:grid-cols-2">
-              <div>
-                <label className={`mb-2 block text-sm uppercase tracking-wider ${darkMode ? 'text-[#cfcfcf]' : 'text-gray-700'}`}>
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  required
-                  value={contactForm.name}
-                  onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
-                  placeholder="Enter your name"
-                  className={`w-full rounded-2xl border px-5 py-4 outline-none transition focus:border-[#D4AF37] ${darkMode ? 'border-white/10 bg-black/50 text-white placeholder:text-gray-500' : 'border-black/10 bg-white text-black placeholder:text-gray-400'}`}
-                />
-              </div>
-
-              <div>
-                <label className={`mb-2 block text-sm uppercase tracking-wider ${darkMode ? 'text-[#cfcfcf]' : 'text-gray-700'}`}>
-                  Email
-                </label>
-                <input
-                  type="email"
-                  required
-                  value={contactForm.email}
-                  onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
-                  placeholder="your@email.com"
-                  className={`w-full rounded-2xl border px-5 py-4 outline-none transition focus:border-[#D4AF37] ${darkMode ? 'border-white/10 bg-black/50 text-white placeholder:text-gray-500' : 'border-black/10 bg-white text-black placeholder:text-gray-400'}`}
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className={`mb-2 block text-sm uppercase tracking-wider ${darkMode ? 'text-[#cfcfcf]' : 'text-gray-700'}`}>
-                Message
-              </label>
-              <textarea
-                required
-                rows="6"
-                value={contactForm.message}
-                onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
-                placeholder="Tell me about your project..."
-                className={`w-full resize-none rounded-2xl border px-5 py-4 outline-none transition focus:border-[#D4AF37] ${darkMode ? 'border-white/10 bg-black/50 text-white placeholder:text-gray-500' : 'border-black/10 bg-white text-black placeholder:text-gray-400'}`}
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="w-full rounded-2xl bg-[#D4AF37] px-8 py-4 font-semibold uppercase tracking-wider text-black transition hover:scale-[1.02] hover:bg-[#c19b2e]"
-            >
-              Send Message on WhatsApp
-            </button>
-          </form>
-        </div>
-      </section>
-
-      <footer className={`border-t px-6 py-14 lg:px-20 ${darkMode ? 'border-white/5 bg-black/40' : 'border-black/10 bg-white/50'}`}>
-        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
-          <div>
-            <h3 className="text-2xl font-serif tracking-wide text-[#D4AF37]">
-              HEZRON OKOTH
-            </h3>
-            <p className={`mt-4 max-w-sm leading-relaxed ${darkMode ? 'text-[#9f9f9f]' : 'text-gray-700'}`}>
-              Software Developer & Web Designer building modern, responsive and
-              professional digital experiences.
-            </p>
-          </div>
-
-          <div>
-            <h4 className="mb-4 text-sm uppercase tracking-[0.2em] text-[#D4AF37]">
-              Quick Links
-            </h4>
-            <div className="grid grid-cols-2 gap-3 text-sm">
-              {['Home', 'About', 'Services', 'Skills', 'Projects', 'Contact'].map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className={`transition hover:text-[#D4AF37] ${darkMode ? 'text-[#cfcfcf]' : 'text-gray-700'}`}
-                >
-                  {item}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h4 className="mb-4 text-sm uppercase tracking-[0.2em] text-[#D4AF37]">
-              Reach Me
-            </h4>
-            <div className={`space-y-3 text-sm ${darkMode ? 'text-[#cfcfcf]' : 'text-gray-700'}`}>
-              <p>WhatsApp: +254 700 806 728</p>
-              <p>Email: hezronoricho@gmail.com</p>
-              <div className="flex gap-5 pt-2">
-                <a href="https://wa.me/254700806728" target="_blank" rel="noopener noreferrer" className="text-[#D4AF37] hover:underline">WhatsApp</a>
-                <a href="mailto:hezronoricho@gmail.com" className="text-[#D4AF37] hover:underline">Email</a>
-                <a href="https://github.com/HezronOkoth001" target="_blank" rel="noopener noreferrer" className="text-[#D4AF37] hover:underline">GitHub</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className={`mx-auto mt-10 max-w-7xl border-t pt-6 text-center text-sm ${darkMode ? 'border-white/10 text-[#777]' : 'border-black/10 text-gray-500'}`}>
-          © {new Date().getFullYear()} Hezron Okoth. All rights reserved.
-        </div>
-      </footer>
-
-      <a
-        href="https://wa.me/254700806728"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-8 right-8 z-50 group"
-      >
-        <div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-[#D4AF37] shadow-[0_0_40px_rgba(212,175,55,0.45)] transition duration-300 hover:scale-110">
-          <div className="absolute inset-0 rounded-full bg-[#D4AF37] opacity-20 animate-ping" />
-
-          <span className="relative z-10 text-2xl font-bold text-white">
-            WA
-          </span>
-        </div>
-      </a>
+      <section id="about" className={`border-t px-6 py-24 lg:px-20 lg:py-32 ${darkMode?'border-white/5':'border-black/10'}`}><div className="mx-auto grid max-w-7xl items-center gap-20 lg:grid-cols-2"><div className="space-y-8"><div className="text-sm uppercase tracking-[0.3em] text-[#D4AF37]">About</div><h2 className={`max-w-xl text-4xl font-black leading-tight sm:text-5xl lg:text-6xl ${darkMode?'text-white':'text-black'}`}>Crafting Digital Experiences That Matter.</h2><div className={`max-w-2xl space-y-6 text-lg leading-relaxed ${darkMode?'text-[#cfcfcf]':'text-gray-700'}`}><p>I am a creative full-stack developer and digital designer focused on building modern, high-performance websites and cinematic user experiences for brands, businesses and personal portfolios.</p><p>I specialize in responsive web development, portfolio websites, landing pages, business platforms and custom digital experiences using modern technologies and frameworks.</p><div id="skills" className="pt-6"><div className="mb-6 flex items-end justify-between gap-4"><div><p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37]">Technical Skills</p><h3 className={`mt-2 text-2xl font-bold sm:text-3xl ${darkMode?'text-white':'text-black'}`}>Tools I Build With</h3></div><span className="hidden rounded-full border border-[#D4AF37]/30 px-4 py-2 text-xs uppercase tracking-wider text-[#D4AF37] sm:block">Core Stack</span></div><div className="grid grid-cols-2 gap-3 sm:grid-cols-3">{skills.map((skill,index)=><div key={skill} className={`group relative overflow-hidden rounded-2xl border p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#D4AF37]/60 hover:shadow-[0_10px_30px_rgba(212,175,55,0.12)] ${darkMode?'border-white/10 bg-white/[0.03]':'border-black/10 bg-black/[0.02]'}`}><div className="absolute inset-x-0 top-0 h-[2px] origin-left scale-x-0 bg-[#D4AF37] transition-transform duration-300 group-hover:scale-x-100" /><div className="flex items-center gap-3"><span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#D4AF37]/10 text-xs font-bold text-[#D4AF37]">{String(index+1).padStart(2,'0')}</span><span className={`text-sm font-semibold sm:text-base ${darkMode?'text-[#e5e5e5]':'text-gray-800'}`}>{skill}</span></div></div>)}</div></div><p>My goal is to help businesses and individuals stand out with visually impressive websites that feel modern, fast and professional across all devices.</p></div></div><div className="grid grid-cols-1 gap-6 sm:grid-cols-2">{stats.map((item,index)=><div key={item.label} className={`rounded-3xl border border-[#D4AF37]/10 bg-[#111111]/80 p-8 backdrop-blur-xl ${index===2?'sm:col-span-2':''}`}><h3 className="text-5xl font-black text-[#D4AF37]">{item.number}</h3><p className="mt-4 text-sm uppercase tracking-widest text-[#9f9f9f]">{item.label}</p></div>)}</div></div></section>
+      <section id="services" className="border-t border-white/5 px-6 py-24 lg:px-20 lg:py-32"><div className="mx-auto max-w-7xl"><div className="mb-16"><p className="mb-5 text-sm uppercase tracking-[0.3em] text-[#D4AF37]">Services</p><h2 className="max-w-2xl text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">Premium Digital Solutions.</h2></div><div className="grid gap-8 md:grid-cols-3">{services.map((item)=><div key={item.title} className={`group rounded-[32px] border p-8 transition duration-300 hover:bg-[#D4AF37]/10 ${darkMode?'border-[#D4AF37]/10 bg-[#111111]/80':'border-black/10 bg-white/80'}`}><div className="mb-8 h-[220px] overflow-hidden rounded-3xl border border-[#D4AF37]/10"><img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" /></div><h3 className={`mb-4 text-2xl font-bold ${darkMode?'text-white':'text-black'}`}>{item.title}</h3><p className={`leading-relaxed ${darkMode?'text-[#9f9f9f]':'text-gray-700'}`}>Modern and futuristic digital experiences with smooth interactions and premium aesthetics.</p></div>)}</div></div></section>
+      <section id="projects" className="border-t border-white/5 px-6 py-24 lg:px-20 lg:py-32"><div className="mx-auto max-w-7xl"><p className="mb-5 text-sm uppercase tracking-[0.3em] text-[#D4AF37]">Projects</p><h2 className={`max-w-3xl text-4xl font-black leading-tight sm:text-5xl lg:text-6xl ${darkMode?'text-white':'text-black'}`}>Modern Websites With Premium User Experiences.</h2><div className="mt-16 grid gap-8 lg:grid-cols-3">{[{title:'Kenyan Sign Language Platform',description:'A React and Vite learning platform designed to help users learn Kenyan Sign Language through structured content, videos and interactive pages.',tags:['React','Vite','Node.js'],link:'https://github.com/HezronOkoth001/master--kenyan-signLanguage-'},{title:'Business Website Platform',description:'A modern business website focused on professional presentation, responsive design, customer contact and online visibility.',tags:['React','Tailwind CSS','Vite'],link:'https://github.com/HezronOkoth001/my-wed'},{title:'Developer Portfolio',description:'A responsive personal portfolio showcasing software development, web design, cybersecurity skills and selected projects.',tags:['JavaScript','React','Responsive UI'],link:'https://github.com/HezronOkoth001'}].map(project=><article key={project.title} className="group overflow-hidden rounded-[32px] border border-[#D4AF37]/10 bg-[#111111]/80 transition duration-300 hover:-translate-y-2 hover:border-[#D4AF37]/40"><div className="flex h-[220px] items-center justify-center bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.18),transparent_55%),linear-gradient(135deg,#1a1a1a,#0d0d0d)]"><span className="text-5xl font-black tracking-widest text-[#D4AF37]/70">{project.title.split(' ').map(word=>word[0]).join('').slice(0,3)}</span></div><div className="space-y-5 p-8"><h3 className="text-2xl font-bold text-white">{project.title}</h3><p className="leading-relaxed text-[#9f9f9f]">{project.description}</p><div className="flex flex-wrap gap-2">{project.tags.map(tag=><span key={tag} className="rounded-full border border-[#D4AF37]/20 px-3 py-1 text-xs text-[#D4AF37]">{tag}</span>)}</div><a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-flex rounded-full border border-[#D4AF37]/40 px-5 py-3 text-sm uppercase tracking-wider text-[#D4AF37] transition hover:bg-[#D4AF37] hover:text-black">View Project</a></div></article>)}</div></div></section>
+      <section id="contact" className={`border-t px-6 py-24 lg:px-20 lg:py-32 ${darkMode?'border-white/5':'border-black/10'}`}><div className="mx-auto max-w-6xl"><div className="mb-14 text-center"><p className="mb-5 text-sm uppercase tracking-[0.3em] text-[#D4AF37]">Contact</p><h2 className={`text-4xl font-black leading-tight sm:text-5xl lg:text-7xl ${darkMode?'text-white':'text-black'}`}>Let's Build Something Amazing.</h2><p className={`mx-auto mt-6 max-w-2xl text-lg leading-relaxed ${darkMode?'text-[#9f9f9f]':'text-gray-700'}`}>Have a website idea, project or business that needs a digital presence? Send me a message and let's talk.</p></div><form onSubmit={handleContactSubmit} className={`mx-auto max-w-3xl space-y-6 rounded-[32px] border p-8 shadow-2xl lg:p-10 ${darkMode?'border-[#D4AF37]/10 bg-[#111111]/80':'border-black/10 bg-white/80'}`}><div className="grid gap-6 sm:grid-cols-2"><div><label className={`mb-2 block text-sm uppercase tracking-wider ${darkMode?'text-[#cfcfcf]':'text-gray-700'}`}>Your Name</label><input type="text" required value={contactForm.name} onChange={e=>setContactForm({...contactForm,name:e.target.value})} placeholder="Enter your name" className={`w-full rounded-2xl border px-5 py-4 outline-none transition focus:border-[#D4AF37] ${darkMode?'border-white/10 bg-black/50 text-white placeholder:text-gray-500':'border-black/10 bg-white text-black placeholder:text-gray-400'}`} /></div><div><label className={`mb-2 block text-sm uppercase tracking-wider ${darkMode?'text-[#cfcfcf]':'text-gray-700'}`}>Email</label><input type="email" required value={contactForm.email} onChange={e=>setContactForm({...contactForm,email:e.target.value})} placeholder="your@email.com" className={`w-full rounded-2xl border px-5 py-4 outline-none transition focus:border-[#D4AF37] ${darkMode?'border-white/10 bg-black/50 text-white placeholder:text-gray-500':'border-black/10 bg-white text-black placeholder:text-gray-400'}`} /></div></div><div><label className={`mb-2 block text-sm uppercase tracking-wider ${darkMode?'text-[#cfcfcf]':'text-gray-700'}`}>Message</label><textarea required rows="6" value={contactForm.message} onChange={e=>setContactForm({...contactForm,message:e.target.value})} placeholder="Tell me about your project..." className={`w-full resize-none rounded-2xl border px-5 py-4 outline-none transition focus:border-[#D4AF37] ${darkMode?'border-white/10 bg-black/50 text-white placeholder:text-gray-500':'border-black/10 bg-white text-black placeholder:text-gray-400'}`} /></div><button type="submit" className="w-full rounded-2xl bg-[#D4AF37] px-8 py-4 font-semibold uppercase tracking-wider text-black transition hover:scale-[1.02] hover:bg-[#c19b2e]">Send Message on WhatsApp</button></form></div></section>
+      <footer className={`border-t px-6 py-14 lg:px-20 ${darkMode?'border-white/5 bg-black/40':'border-black/10 bg-white/50'}`}><div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3"><div><h3 className="text-2xl font-serif tracking-wide text-[#D4AF37]">HEZRON OKOTH</h3><p className={`mt-4 max-w-sm leading-relaxed ${darkMode?'text-[#9f9f9f]':'text-gray-700'}`}>Software Developer & Web Designer building modern, responsive and professional digital experiences.</p></div><div><h4 className="mb-4 text-sm uppercase tracking-[0.2em] text-[#D4AF37]">Quick Links</h4><div className="grid grid-cols-2 gap-3 text-sm">{['Home','About','Services','Skills','Projects','Contact'].map(item=><a key={item} href={`#${item.toLowerCase()}`} className={`transition hover:text-[#D4AF37] ${darkMode?'text-[#cfcfcf]':'text-gray-700'}`}>{item}</a>)}</div></div><div><h4 className="mb-4 text-sm uppercase tracking-[0.2em] text-[#D4AF37]">Reach Me</h4><div className={`space-y-3 text-sm ${darkMode?'text-[#cfcfcf]':'text-gray-700'}`}><p>WhatsApp: +254 700 806 728</p><p>Email: hezronoricho@gmail.com</p><div className="flex gap-5 pt-2"><a href="https://wa.me/254700806728" target="_blank" rel="noopener noreferrer" className="text-[#D4AF37] hover:underline">WhatsApp</a><a href="mailto:hezronoricho@gmail.com" className="text-[#D4AF37] hover:underline">Email</a><a href="https://github.com/HezronOkoth001" target="_blank" rel="noopener noreferrer" className="text-[#D4AF37] hover:underline">GitHub</a></div></div></div></div><div className={`mx-auto mt-10 max-w-7xl border-t pt-6 text-center text-sm ${darkMode?'border-white/10 text-[#777]':'border-black/10 text-gray-500'}`}>© {new Date().getFullYear()} Hezron Okoth. All rights reserved.</div></footer>
+      <a href="https://wa.me/254700806728" target="_blank" rel="noopener noreferrer" className="fixed bottom-8 right-8 z-50 group"><div className="relative flex h-16 w-16 items-center justify-center rounded-full bg-[#D4AF37] shadow-[0_0_40px_rgba(212,175,55,0.45)] transition duration-300 hover:scale-110"><div className="absolute inset-0 rounded-full bg-[#D4AF37] opacity-20 animate-ping" /><span className="relative z-10 text-2xl font-bold text-white">WA</span></div></a>
     </div>
-  );
+  )
 }
