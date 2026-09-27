@@ -165,7 +165,7 @@ export default function FuturisticHeroUI() {
       </header>
 
       <main id="home" className="relative z-10 px-4 pb-20 pt-36 lg:px-6 lg:pt-44">
-        <div className={`relative mx-auto max-w-[1450px] overflow-hidden rounded-[40px] border border-[#D4AF37]/10 ${darkMode ? 'bg-[#050505]/90' : 'bg-white/80'}`}>
+        <div className={`relative mx-auto max-w-[1450px] overflow-hidden rounded-[40px] border border-[#D4AF37]/10 ${darkMode ? 'bg-[#050505]/95 text-white' : 'bg-white/95 text-black'}`}>
           <div className="absolute left-0 top-0 h-[500px] w-[500px] rounded-full bg-[#D4AF37]/10 blur-3xl" />
 
           <div className="grid items-center gap-14 p-8 lg:grid-cols-[0.95fr_1.05fr] lg:p-16">
@@ -258,7 +258,7 @@ export default function FuturisticHeroUI() {
 
       <section
         id="about"
-        className="border-t border-white/5 px-6 py-24 lg:px-20 lg:py-32"
+        className={`border-t px-6 py-24 lg:px-20 lg:py-32 ${darkMode ? 'border-white/5' : 'border-black/10'}`}
       >
         <div className="mx-auto grid max-w-7xl items-center gap-20 lg:grid-cols-2">
           <div className="space-y-8">
@@ -266,11 +266,11 @@ export default function FuturisticHeroUI() {
               About
             </div>
 
-            <h2 className="max-w-xl text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
+            <h2 className={`max-w-xl text-4xl font-black leading-tight sm:text-5xl lg:text-6xl ${darkMode ? 'text-white' : 'text-black'}`}>
               Crafting Digital Experiences That Matter.
             </h2>
 
-            <div className="max-w-2xl space-y-6 text-lg leading-relaxed text-[#cfcfcf]">
+            <div className={`max-w-2xl space-y-6 text-lg leading-relaxed ${darkMode ? 'text-[#cfcfcf]' : 'text-gray-700'}`}>
               <p>
                 I am a creative full-stack developer and digital designer focused
                 on building modern, high-performance websites and cinematic user
@@ -352,7 +352,7 @@ export default function FuturisticHeroUI() {
             {services.map((item) => (
               <div
                 key={item.title}
-                className="group rounded-[32px] border border-[#D4AF37]/10 bg-[#111111]/80 p-8 transition duration-300 hover:bg-[#D4AF37]/10"
+                className={`group rounded-[32px] border p-8 transition duration-300 hover:bg-[#D4AF37]/10 ${darkMode ? 'border-[#D4AF37]/10 bg-[#111111]/80' : 'border-black/10 bg-white/80'}`}
               >
                 <div className="mb-8 h-[220px] overflow-hidden rounded-3xl border border-[#D4AF37]/10">
                   <img
@@ -362,11 +362,11 @@ export default function FuturisticHeroUI() {
                   />
                 </div>
 
-                <h3 className="mb-4 text-2xl font-bold">
+                <h3 className={`mb-4 text-2xl font-bold ${darkMode ? 'text-white' : 'text-black'}`}>
                   {item.title}
                 </h3>
 
-                <p className="leading-relaxed text-[#9f9f9f]">
+                <p className={`leading-relaxed ${darkMode ? 'text-[#9f9f9f]' : 'text-gray-700'}`}>
                   Modern and futuristic digital experiences with smooth
                   interactions and premium aesthetics.
                 </p>
@@ -385,7 +385,7 @@ export default function FuturisticHeroUI() {
             Projects
           </p>
 
-          <h2 className="max-w-3xl text-4xl font-black leading-tight sm:text-5xl lg:text-6xl">
+          <h2 className={`max-w-3xl text-4xl font-black leading-tight sm:text-5xl lg:text-6xl ${darkMode ? 'text-white' : 'text-black'}`}>
             Modern Websites With Premium User Experiences.
           </h2>
 
@@ -467,7 +467,7 @@ export default function FuturisticHeroUI() {
             Contact
           </p>
 
-          <h2 className="text-4xl font-black leading-tight sm:text-5xl lg:text-7xl">
+          <h2 className={`text-4xl font-black leading-tight sm:text-5xl lg:text-7xl ${darkMode ? 'text-white' : 'text-black'}`}>
             Let&apos;s Build Something Amazing.
           </h2>
 
