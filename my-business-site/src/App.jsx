@@ -11,10 +11,11 @@ const services = [
 const skillGroups = [
   { title: 'Web Development', number: '01', skills: ['HTML5','CSS3','JavaScript','React','TypeScript','Tailwind CSS','Frontend Development','Responsive Design','UI/UX Design'] },
   { title: 'Backend & APIs', number: '02', skills: ['Node.js','Express.js','REST APIs','API Integration'] },
-  { title: 'Databases', number: '03', skills: ['MySQL','PostgreSQL','Microsoft SQL Server','Database Design','Database Management'] },
-  { title: 'Cybersecurity', number: '04', skills: ['Linux','Bash','Nmap','Wireshark','Burp Suite','Web Security'] },
-  { title: 'Development Tools', number: '05', skills: ['Git','GitHub','Vite','npm','VS Code','Chrome DevTools'] },
-  { title: 'Deployment & Hosting', number: '06', skills: ['Vercel','Netlify','Render','Linux Server'] },
+  { title: 'Programming & Scripting', number: '03', skills: ['Python','Bash'] },
+  { title: 'Databases', number: '04', skills: ['MySQL','PostgreSQL','Microsoft SQL Server','Database Design','Database Management'] },
+  { title: 'Cybersecurity', number: '05', skills: ['Linux','Nmap','Wireshark','Burp Suite','Web Security'] },
+  { title: 'Development Tools', number: '06', skills: ['Git','GitHub','Vite','npm','VS Code','Chrome DevTools'] },
+  { title: 'Deployment & Hosting', number: '07', skills: ['Vercel','Netlify','Render','Linux Server'] },
 ]
 const stats = [{number:'2+',label:'Years Experience'},{number:'20+',label:'Projects Completed'},{number:'10+',label:'Modern Technologies & Tools'}]
 
