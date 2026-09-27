@@ -212,21 +212,27 @@ export default function FuturisticHeroUI() {
               </p>
 
               <div className="flex flex-wrap gap-5 pt-4 lg:pt-6">
-                <button className="rounded-2xl bg-[#D4AF37] px-8 py-4 text-sm uppercase tracking-[0.12em] text-black transition-all duration-300 hover:scale-105 lg:px-10 lg:py-5 lg:text-xl">
+                <a
+                  href="#projects"
+                  className="rounded-2xl bg-[#D4AF37] px-8 py-4 text-sm uppercase tracking-[0.12em] text-black transition-all duration-300 hover:scale-105 lg:px-10 lg:py-5 lg:text-xl"
+                >
                   View My Work
-                </button>
+                </a>
 
-                <button className="rounded-2xl border border-[#D4AF37]/50 px-8 py-4 text-sm uppercase tracking-[0.12em] text-[#D4AF37] transition-all duration-300 hover:bg-[#D4AF37] hover:text-black lg:px-10 lg:py-5 lg:text-xl">
-                
-                  <a href ="https://wa.me/254700806728" target="_blank" rel="noopener noreferrer">Contact me
-                  </a>
-                </button>
+                <a
+                  href="https://wa.me/254700806728"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-2xl border border-[#D4AF37]/50 px-8 py-4 text-sm uppercase tracking-[0.12em] text-[#D4AF37] transition-all duration-300 hover:bg-[#D4AF37] hover:text-black lg:px-10 lg:py-5 lg:text-xl"
+                >
+                  Contact me
+                </a>
               </div>
             </div>
           </div>
 
           <div className="px-8 pb-10 lg:px-16 lg:pb-12">
-            <div className="flex flex-wrap items-center justify-between gap-10 rounded-[30px] border border-[#D4AF37]/10 darkMode ? 'bg-black/60' : 'bg-white/70' px-8 py-8 backdrop-blur-xl lg:px-10 lg:py-10">
+            <div className={`flex flex-wrap items-center justify-between gap-10 rounded-[30px] border border-[#D4AF37]/10 ${darkMode ? 'bg-black/60' : 'bg-white/70'} px-8 py-8 backdrop-blur-xl lg:px-10 lg:py-10`}>
               <div>
                 <p className="text-lg uppercase tracking-[0.2em] text-[#D4AF37] lg:text-xl">
                   Reach me
@@ -239,12 +245,12 @@ export default function FuturisticHeroUI() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap items-center gap-8 text-3xl font-medium text-[#D4AF37] opacity-90 lg:gap-14 lg:text-5xl">
-                <span>Whatsapp</span>
-                <span>Gmail</span>
-                <span>Facebook</span>
-                <span>Twitter</span>
-                <span>Instagram</span>
+              <div className="flex flex-wrap items-center gap-8 text-xl font-medium text-[#D4AF37] opacity-90 lg:gap-10 lg:text-2xl">
+                <a href="https://wa.me/254700806728" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">WhatsApp</a>
+                <a href="mailto:hezronoricho@gmail.com" className="transition hover:text-white">Gmail</a>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">Facebook</a>
+                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">Twitter</a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="transition hover:text-white">Instagram</a>
               </div>
             </div>
           </div>
@@ -299,13 +305,13 @@ export default function FuturisticHeroUI() {
               </p>
             </div>
 
-          <button className="rounded-full bg-[#D4AF37] px-8 py-4 font-medium text-black shadow-[0_0_45px_rgba(212,175,55,0.35)] transition hover:bg-[#c19b2e]">
-
-
-              <a href="assets/Hezron Okoth CV....pdf" download
-              download="Hezron Okoth CV....pdf"
-              >Download</a>
-            </button>
+          <a
+              href={cv}
+              download="Hezron Okoth CV.pdf"
+              className="inline-block rounded-full bg-[#D4AF37] px-8 py-4 font-medium text-black shadow-[0_0_45px_rgba(212,175,55,0.35)] transition hover:bg-[#c19b2e]"
+            >
+              Download CV
+            </a>
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -428,7 +434,7 @@ export default function FuturisticHeroUI() {
 
           <button className="rounded-full bg-[#D4AF37] px-10 py-5 text-lg font-medium text-black shadow-[0_0_45px_rgba(212,175,55,0.35)] transition hover:bg-[#c19b2e]">
           
-            <a href="https://wa.me/254700806728" target="_blank" rel="noopener noreferrer">Start projets</a>
+            <a href="https://wa.me/254700806728" target="_blank" rel="noopener noreferrer">Start projects</a>
                
             
           </button>
