@@ -59,6 +59,13 @@ const stats = [
 export default function FuturisticHeroUI() {
   const [darkMode, setDarkMode] = useState(true);
   const [showContactOptions, setShowContactOptions] = useState(false);
+  const [contactForm, setContactForm] = useState({ name: '', email: '', message: '' });
+
+  const handleContactSubmit = (event) => {
+    event.preventDefault();
+    const text = `Hello Hezron, my name is ${contactForm.name}. Email: ${contactForm.email}. ${contactForm.message}`;
+    window.open(`https://wa.me/254700806728?text=${encodeURIComponent(text)}`, '_blank');
+  };
 
   return (
     <div
@@ -452,32 +459,129 @@ export default function FuturisticHeroUI() {
 
       <section
         id="contact"
-        className="border-t border-white/5 px-6 py-24 lg:px-20 lg:py-32"
+        className={`border-t px-6 py-24 lg:px-20 lg:py-32 ${darkMode ? 'border-white/5' : 'border-black/10'}`}
       >
-        <div className="mx-auto max-w-4xl space-y-8 text-center">
-          <p className="text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
-            Contact
-          </p>
+        <div className="mx-auto max-w-6xl">
+          <div className="mb-14 text-center">
+            <p className="mb-5 text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
+              Contact
+            </p>
+            <h2 className={`text-4xl font-black leading-tight sm:text-5xl lg:text-7xl ${darkMode ? 'text-white' : 'text-black'}`}>
+              Let&apos;s Build Something Amazing.
+            </h2>
+            <p className={`mx-auto mt-6 max-w-2xl text-lg leading-relaxed ${darkMode ? 'text-[#9f9f9f]' : 'text-gray-700'}`}>
+              Have a website idea, project or business that needs a digital presence?
+              Send me a message and let&apos;s talk.
+            </p>
+          </div>
 
-          <h2 className={`text-4xl font-black leading-tight sm:text-5xl lg:text-7xl ${darkMode ? 'text-white' : 'text-black'}`}>
-            Let&apos;s Build Something Amazing.
-          </h2>
-
-          <p className="mx-auto max-w-2xl text-lg leading-relaxed text-[#9f9f9f]">
-            Ready to create a premium futuristic website or portfolio? Let&apos;s
-            work together.
-          </p>
-
-          <a
-            href="https://wa.me/254700806728"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block rounded-full bg-[#D4AF37] px-10 py-5 text-lg font-medium text-black shadow-[0_0_45px_rgba(212,175,55,0.35)] transition hover:bg-[#c19b2e]"
+          <form
+            onSubmit={handleContactSubmit}
+            className={`mx-auto max-w-3xl space-y-6 rounded-[32px] border p-8 shadow-2xl lg:p-10 ${darkMode ? 'border-[#D4AF37]/10 bg-[#111111]/80' : 'border-black/10 bg-white/80'}`}
           >
-            Start projects
-          </a>
+            <div className="grid gap-6 sm:grid-cols-2">
+              <div>
+                <label className={`mb-2 block text-sm uppercase tracking-wider ${darkMode ? 'text-[#cfcfcf]' : 'text-gray-700'}`}>
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={contactForm.name}
+                  onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
+                  placeholder="Enter your name"
+                  className={`w-full rounded-2xl border px-5 py-4 outline-none transition focus:border-[#D4AF37] ${darkMode ? 'border-white/10 bg-black/50 text-white placeholder:text-gray-500' : 'border-black/10 bg-white text-black placeholder:text-gray-400'}`}
+                />
+              </div>
+
+              <div>
+                <label className={`mb-2 block text-sm uppercase tracking-wider ${darkMode ? 'text-[#cfcfcf]' : 'text-gray-700'}`}>
+                  Email
+                </label>
+                <input
+                  type="email"
+                  required
+                  value={contactForm.email}
+                  onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
+                  placeholder="your@email.com"
+                  className={`w-full rounded-2xl border px-5 py-4 outline-none transition focus:border-[#D4AF37] ${darkMode ? 'border-white/10 bg-black/50 text-white placeholder:text-gray-500' : 'border-black/10 bg-white text-black placeholder:text-gray-400'}`}
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className={`mb-2 block text-sm uppercase tracking-wider ${darkMode ? 'text-[#cfcfcf]' : 'text-gray-700'}`}>
+                Message
+              </label>
+              <textarea
+                required
+                rows="6"
+                value={contactForm.message}
+                onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
+                placeholder="Tell me about your project..."
+                className={`w-full resize-none rounded-2xl border px-5 py-4 outline-none transition focus:border-[#D4AF37] ${darkMode ? 'border-white/10 bg-black/50 text-white placeholder:text-gray-500' : 'border-black/10 bg-white text-black placeholder:text-gray-400'}`}
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full rounded-2xl bg-[#D4AF37] px-8 py-4 font-semibold uppercase tracking-wider text-black transition hover:scale-[1.02] hover:bg-[#c19b2e]"
+            >
+              Send Message on WhatsApp
+            </button>
+          </form>
         </div>
       </section>
+
+      <footer className={`border-t px-6 py-14 lg:px-20 ${darkMode ? 'border-white/5 bg-black/40' : 'border-black/10 bg-white/50'}`}>
+        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
+          <div>
+            <h3 className="text-2xl font-serif tracking-wide text-[#D4AF37]">
+              HEZRON OKOTH
+            </h3>
+            <p className={`mt-4 max-w-sm leading-relaxed ${darkMode ? 'text-[#9f9f9f]' : 'text-gray-700'}`}>
+              Software Developer & Web Designer building modern, responsive and
+              professional digital experiences.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="mb-4 text-sm uppercase tracking-[0.2em] text-[#D4AF37]">
+              Quick Links
+            </h4>
+            <div className="grid grid-cols-2 gap-3 text-sm">
+              {['Home', 'About', 'Services', 'Skills', 'Projects', 'Contact'].map((item) => (
+                <a
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
+                  className={`transition hover:text-[#D4AF37] ${darkMode ? 'text-[#cfcfcf]' : 'text-gray-700'}`}
+                >
+                  {item}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h4 className="mb-4 text-sm uppercase tracking-[0.2em] text-[#D4AF37]">
+              Reach Me
+            </h4>
+            <div className={`space-y-3 text-sm ${darkMode ? 'text-[#cfcfcf]' : 'text-gray-700'}`}>
+              <p>WhatsApp: +254 700 806 728</p>
+              <p>Email: hezronoricho@gmail.com</p>
+              <div className="flex gap-5 pt-2">
+                <a href="https://wa.me/254700806728" target="_blank" rel="noopener noreferrer" className="text-[#D4AF37] hover:underline">WhatsApp</a>
+                <a href="mailto:hezronoricho@gmail.com" className="text-[#D4AF37] hover:underline">Email</a>
+                <a href="https://github.com/HezronOkoth001" target="_blank" rel="noopener noreferrer" className="text-[#D4AF37] hover:underline">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={`mx-auto mt-10 max-w-7xl border-t pt-6 text-center text-sm ${darkMode ? 'border-white/10 text-[#777]' : 'border-black/10 text-gray-500'}`}>
+          © {new Date().getFullYear()} Hezron Okoth. All rights reserved.
+        </div>
+      </footer>
 
       <a
         href="https://wa.me/254700806728"
