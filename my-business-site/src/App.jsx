@@ -8,7 +8,7 @@ const services = [
   { title: 'Frontend Development', image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop' },
   { title: 'UI/UX Systems', image: 'https://images.unsplash.com/photo-1559028012-481c04fa702d?q=80&w=1200&auto=format&fit=crop' },
 ]
-const skills = ['Python','JavaScript','Linux','Wireshark','Nmap','Burpsuite','React','TypeScript','Tailwind CSS','Frontend Development','Responsive Design','UI/UX Design']
+const skills = ['Python','JavaScript','Linux','Wireshark','Nmap','Burpsuite','React','TypeScript','Tailwind CSS','Frontend Development','Responsive Design','UI/UX Design','Microsoft SQL Server','MySQL','PostgreSQL','REST APIs','Database Management']
 const stats = [{number:'2+',label:'Years Experience'},{number:'20+',label:'Projects Completed'},{number:'10+',label:'Modern Technologies & Tools'}]
 
 export default function FuturisticHeroUI() {
