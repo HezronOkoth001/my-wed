@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import './App.css'
 import profile from './assets/profile.png.png'
-import cv from './assets/Hezron Okoth CV....pdf'
 
 
 
@@ -391,24 +390,69 @@ export default function FuturisticHeroUI() {
           </h2>
 
           <div className="mt-16 grid gap-8 lg:grid-cols-3">
-            {[1, 2, 3].map((project) => (
-              <div
-                key={project}
-                className="overflow-hidden rounded-[32px] border border-[#D4AF37]/10 bg-[#111111]/80"
+            {[
+              {
+                title: 'Kenyan Sign Language Platform',
+                description:
+                  'A React and Vite learning platform designed to help users learn Kenyan Sign Language through structured content, videos and interactive pages.',
+                tags: ['React', 'Vite', 'Node.js'],
+                link: 'https://github.com/HezronOkoth001/master--kenyan-signLanguage-',
+              },
+              {
+                title: 'Business Website Platform',
+                description:
+                  'A modern business website focused on professional presentation, responsive design, customer contact and online visibility.',
+                tags: ['React', 'Tailwind CSS', 'Vite'],
+                link: 'https://github.com/HezronOkoth001/my-wed',
+              },
+              {
+                title: 'Developer Portfolio',
+                description:
+                  'A responsive personal portfolio showcasing software development, web design, cybersecurity skills and selected projects.',
+                tags: ['JavaScript', 'React', 'Responsive UI'],
+                link: 'https://github.com/HezronOkoth001',
+              },
+            ].map((project) => (
+              <article
+                key={project.title}
+                className="group overflow-hidden rounded-[32px] border border-[#D4AF37]/10 bg-[#111111]/80 transition duration-300 hover:-translate-y-2 hover:border-[#D4AF37]/40"
               >
-                <div className="h-[260px] bg-[linear-gradient(135deg,#1a1a1a,#0d0d0d)]" />
+                <div className="flex h-[220px] items-center justify-center bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.18),transparent_55%),linear-gradient(135deg,#1a1a1a,#0d0d0d)]">
+                  <span className="text-5xl font-black tracking-widest text-[#D4AF37]/70">
+                    {project.title.split(' ').map(word => word[0]).join('').slice(0, 3)}
+                  </span>
+                </div>
 
-                <div className="space-y-4 p-8">
+                <div className="space-y-5 p-8">
                   <h3 className="text-2xl font-bold text-white">
-                    Premium Portfolio {project}
+                    {project.title}
                   </h3>
 
                   <p className="leading-relaxed text-[#9f9f9f]">
-                    A cinematic modern website with premium UI interactions,
-                    responsive layouts and luxury-inspired visual design.
+                    {project.description}
                   </p>
+
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-[#D4AF37]/20 px-3 py-1 text-xs text-[#D4AF37]"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex rounded-full border border-[#D4AF37]/40 px-5 py-3 text-sm uppercase tracking-wider text-[#D4AF37] transition hover:bg-[#D4AF37] hover:text-black"
+                  >
+                    View Project
+                  </a>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
