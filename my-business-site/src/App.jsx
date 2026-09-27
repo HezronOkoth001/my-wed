@@ -290,18 +290,39 @@ export default function FuturisticHeroUI() {
                 experiences using modern technologies and frameworks.
               </p>
 
-              <div
-                id="skills"
-                className="flex flex-wrap gap-4 pt-4"
-              >
-                {skills.map((skill) => (
-                  <div
-                    key={skill}
-                    className="rounded-full border border-[#D4AF37]/20 bg-[#111111]/80 px-5 py-3 text-sm tracking-wide text-[#D4AF37]"
-                  >
-                    {skill}
+              <div id="skills" className="pt-6">
+                <div className="mb-6 flex items-end justify-between gap-4">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.3em] text-[#D4AF37]">
+                      Technical Skills
+                    </p>
+                    <h3 className={`mt-2 text-2xl font-bold sm:text-3xl ${darkMode ? 'text-white' : 'text-black'}`}>
+                      Tools I Build With
+                    </h3>
                   </div>
-                ))}
+                  <span className="hidden rounded-full border border-[#D4AF37]/30 px-4 py-2 text-xs uppercase tracking-wider text-[#D4AF37] sm:block">
+                    Core Stack
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                  {skills.map((skill, index) => (
+                    <div
+                      key={skill}
+                      className={`group relative overflow-hidden rounded-2xl border p-4 transition-all duration-300 hover:-translate-y-1 hover:border-[#D4AF37]/60 hover:shadow-[0_10px_30px_rgba(212,175,55,0.12)] ${darkMode ? 'border-white/10 bg-white/[0.03]' : 'border-black/10 bg-black/[0.02]'}`}
+                    >
+                      <div className="absolute inset-x-0 top-0 h-[2px] origin-left scale-x-0 bg-[#D4AF37] transition-transform duration-300 group-hover:scale-x-100" />
+                      <div className="flex items-center gap-3">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#D4AF37]/10 text-xs font-bold text-[#D4AF37]">
+                          {String(index + 1).padStart(2, '0')}
+                        </span>
+                        <span className={`text-sm font-semibold sm:text-base ${darkMode ? 'text-[#e5e5e5]' : 'text-gray-800'}`}>
+                          {skill}
+                        </span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               <p>
